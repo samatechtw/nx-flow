@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+MSG_PATH=$1 npm run commit-msg -- $1
+

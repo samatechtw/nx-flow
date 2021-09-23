@@ -3,10 +3,15 @@
   "name": "nx-flow",
   "version": "0.0.1",
   "generators": {
-    "nx-flow": {
-      "factory": "./src/generators/nx-flow/generator",
-      "schema": "./src/generators/nx-flow/schema.json",
-      "description": "nx-flow generator"
+    "app": {
+      "factory": "./src/generators/app/generator",
+      "schema": "./src/generators/app/schema.json",
+      "description": "Flow dapp generator"
+    },
+    "test": {
+      "factory": "./src/generators/test/generator",
+      "schema": "./src/generators/test/schema.json",
+      "description": "Flow test app generator"
     }
   }
 }

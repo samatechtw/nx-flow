@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "<%= offsetFromRoot %>dist/out-tsc",
+    "module": "commonjs",
+    "types": ["node"]
+  },
+  "exclude": ["**/*.spec.js", "**/*.spec.ts"],
+  "include": ["**/*.ts", "**/*.js", "**/*.json"]
+}

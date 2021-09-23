@@ -1,18 +1,22 @@
 {
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
-  "$id": "NxFlow",
+  "id": "Flow",
   "title": "",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "",
+      "description": "The project name, used for folder structure and package reference.",
       "$default": {
         "$source": "argv",
         "index": 0
       },
       "x-prompt": "What name would you like to use?"
+    },
+    "title": {
+      "type": "string",
+      "description": "Project title - the human readable app name"
     },
     "tags": {
       "type": "string",
