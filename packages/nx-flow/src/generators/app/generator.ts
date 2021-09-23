@@ -103,7 +103,7 @@ export default async function (host: Tree, options: FlowAppGeneratorSchema) {
     sourceRoot: joinPathFragments(projectRoot, 'src'),
     targets: {
       build: {
-        executor: 'nx-flow:build-app',
+        executor: 'nx-flow:build',
         options: {
           dist: joinPathFragments('dist', projectRoot),
         },

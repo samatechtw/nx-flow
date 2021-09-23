@@ -1,5 +1,5 @@
 {
-  "name": "@nx-flow/nx-flow",
+  "name": "nx-flow",
   "version": "0.0.1",
   "main": "src/index.js",
   "generators": "./generators.json",
