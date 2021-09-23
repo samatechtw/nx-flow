@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "projects": {
+    "nx-flow": {
+      "root": "packages/nx-flow",
+      "sourceRoot": "packages/nx-flow/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["packages/nx-flow/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/nx-flow"],
+          "options": {
+            "jestConfig": "packages/nx-flow/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/nx-flow",
+            "tsConfig": "packages/nx-flow/tsconfig.lib.json",
+            "packageJson": "packages/nx-flow/package.json",
+            "main": "packages/nx-flow/src/index.ts",
+            "assets": [
+              "packages/nx-flow/*.md",
+              {
+                "input": "./packages/nx-flow/src",
+                "glob": "**/!(*.ts)",
+                "output": "./src"
+              },
+              {
+                "input": "./packages/nx-flow/src",
+                "glob": "**/*.d.ts",
+                "output": "./src"
+              },
+              {
+                "input": "./packages/nx-flow",
+                "glob": "generators.json",
+                "output": "."
+              },
+              {
+                "input": "./packages/nx-flow",
+                "glob": "executors.json",
+                "output": "."
+              }
+            ]
+          }
+        }
+      }
+    },
+    "nx-flow-e2e": {
+      "root": "e2e/nx-flow-e2e",
+      "projectType": "application",
+      "sourceRoot": "e2e/nx-flow-e2e/src",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/nx-plugin:e2e",
+          "options": {
+            "target": "nx-flow:build",
+            "jestConfig": "e2e/nx-flow-e2e/jest.config.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}
