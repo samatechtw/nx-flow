@@ -116,12 +116,6 @@ export default async function (host: Tree, options: FlowAppGeneratorSchema) {
           passWithNoTests: true,
         },
       },
-      lint: {
-        executor: '@nrwl/linter:eslint',
-        options: {
-          lintFilePatterns: [`${projectRoot}/**/*.{js,ts}`],
-        },
-      },
     },
     tags: normalizedOptions.parsedTags,
   });
