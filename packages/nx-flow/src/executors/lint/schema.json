@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "title": "Cadence linter",
+  "description": "Lint the app with @samatech/cadence-lint",
+  "type": "object",
+  "properties": {
+    "configPath": {
+      "type": "string",
+      "description": "Path to flow.json. Defaults to current directory",
+      "alias": "p"
+    },
+    "files": {
+      "type": "string",
+      "description": "Defaults to \"./**/*.cdc\". Comma separated globs are parse separately. Uses fast-glob.",
+      "alias": "c"
+    },
+    "strict": {
+      "type": "boolean",
+      "description": "Fail on warnings",
+      "alias": "s"
+    }
+  },
+  "required": []
+}

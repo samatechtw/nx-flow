@@ -11,6 +11,7 @@ export const AppDependencies = {
   '@onflow/util-uid': '^0.0.1',
   '@onflow/util-invariant': '^0.0.0',
   '@onflow/util-actor': '^0.0.2',
+  '@samatech/cadence-lint': '^0.2.0',
 };
 
 export const AppDevDependencies = {};
