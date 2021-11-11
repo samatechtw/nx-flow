@@ -11,7 +11,7 @@ export default async function runExecutor(
   const workspaceRoot = getWorkspaceRoot(context);
 
   try {
-    const args = ['node_modules/.bin/cadence-lint'];
+    const args = ['node', 'node_modules/.bin/cadence-lint'];
     if (options.configPath) {
       args.push('--configPath', `"${options.configPath}"`);
     }
