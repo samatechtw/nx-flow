@@ -28,6 +28,5 @@ export function executeCommand(root: string, args: string[]): boolean {
     console.error(`nx-flow command failed:\n> ${cmd}`);
     return false;
   }
-  shell.popd();
   return true;
 }
