@@ -6,6 +6,6 @@
   "executors": "./executors.json",
   "peerDependencies": {
     "shelljs": "^0.8.4",
-    "@samatech/cadence-lint": "^0.2.0"
+    "@samatech/cadence-lint": "^0.3.0"
   }
 }
